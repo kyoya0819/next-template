@@ -1,4 +1,4 @@
-name: Eslint
+name: Lint
 
 on:
     push:
@@ -30,5 +30,8 @@ jobs:
               if: steps.yarn_cache.outputs.cache-hit != 'true'
               run: yarn install --prefer-offline
 
-            - name: Eslint Check
-              run: yarn lint
+            - name: Esint Check
+              run: yarn eslint
+
+            - name: Stylelint Check
+              run: yarn stylelint
