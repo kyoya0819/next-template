@@ -5,6 +5,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "static": "next build && next export",
         "lint": "yarn eslint && yarn stylelint",
         "lint:fix": "yarn eslint:fix && yarn stylelint:fix",
         "eslint": "eslint \"./**/*.{js,ts,jsx,tsx}\"",
@@ -16,7 +17,7 @@
         "next": "^12.1.6",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
-        "sass": "^1.51.0"
+        "sass": "^1.52.1"
     },
     "devDependencies": {
         "@types/node": "^17.0.35",
@@ -24,10 +25,10 @@
         "@types/sass": "^1.43.1",
         "@typescript-eslint/eslint-plugin": "^5.25.0",
         "@typescript-eslint/parser": "^5.25.0",
-        "eslint": "^8.15.0",
+        "eslint": "^8.16.0",
         "eslint-config-next": "^12.1.6",
         "postcss-scss": "^4.0.4",
-        "stylelint": "^14.8.2",
+        "stylelint": "^14.8.3",
         "stylelint-config-recess-order": "^3.0.0",
         "stylelint-scss": "^4.2.0",
         "typescript": "^4.6.4"
