@@ -24,7 +24,7 @@
         "@types/react": "^18.0.15",
         "@types/sass": "^1.43.1",
         "@typescript-eslint/eslint-plugin": "^5.30.6",
-        "@typescript-eslint/parser": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.7",
         "eslint": "^8.19.0",
         "eslint-config-next": "^12.2.2",
         "postcss-scss": "^4.0.4",
