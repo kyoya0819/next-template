@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
 
     return (
         <>
@@ -9,4 +9,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default Index;
