@@ -50,6 +50,10 @@ module.exports = {
                 "objectsInObjects": false
             }
         ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
         "ordered-imports/ordered-imports": [
             "error"
         ],
@@ -61,51 +65,51 @@ module.exports = {
                     {
                         pattern: "scripts/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "components/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "styles/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "assets/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "./scripts/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "./components/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "./styles/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     },
                     {
                         pattern: "./assets/**",
                         group: "parent",
-                        position: "before",
+                        position: "before"
                     }
                 ],
                 pathGroupsExcludedImportTypes: [],
                 alphabetize: {
-                    order: "asc",
+                    order: "asc"
                 },
                 "newlines-between": "always",
                 warnOnUnassignedImports: true
-            },
+            }
         ],
         "react/prop-types": "off",
         "@next/next/no-img-element": "off"
