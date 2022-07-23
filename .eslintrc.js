@@ -20,7 +20,8 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "ordered-imports"
     ],
     "rules": {
         "indent": [
@@ -41,6 +42,70 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always",
+            {
+                "objectsInObjects": false
+            }
+        ],
+        "ordered-imports/ordered-imports": [
+            "error"
+        ],
+        "import/order": [
+            "error",
+            {
+                groups: [["builtin", "external", "type"], "parent"],
+                pathGroups: [
+                    {
+                        pattern: "scripts/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "components/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "styles/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "assets/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "./scripts/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "./components/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "./styles/**",
+                        group: "parent",
+                        position: "before",
+                    },
+                    {
+                        pattern: "./assets/**",
+                        group: "parent",
+                        position: "before",
+                    }
+                ],
+                pathGroupsExcludedImportTypes: [],
+                alphabetize: {
+                    order: "asc",
+                },
+                "newlines-between": "always",
+                warnOnUnassignedImports: true
+            },
         ],
         "react/prop-types": "off",
         "@next/next/no-img-element": "off"
