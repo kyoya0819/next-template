@@ -30,7 +30,7 @@
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-ordered-imports": "^0.6.0",
         "postcss-scss": "^4.0.4",
-        "stylelint": "^14.9.1",
+        "stylelint": "^14.10.0",
         "stylelint-config-recess-order": "^3.0.0",
         "stylelint-scss": "^4.3.0",
         "typescript": "^4.7.4"
