@@ -9,19 +9,19 @@ on:
     workflow_dispatch:
 
 jobs:
-    build:
+    lint:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: '16'
 
             - name: Cache Dependencies
               id: yarn_cache
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -30,8 +30,5 @@ jobs:
               if: steps.yarn_cache.outputs.cache-hit != 'true'
               run: yarn install --prefer-offline
 
-            - name: Esint Check
-              run: yarn eslint
-
-            - name: Stylelint Check
-              run: yarn stylelint
+            - name: Eslint Check
+              run: yarn lint
