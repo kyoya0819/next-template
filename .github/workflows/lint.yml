@@ -31,4 +31,7 @@ jobs:
               run: yarn install --prefer-offline
 
             - name: Eslint Check
-              run: yarn lint
+              run: yarn eslint
+
+            - name: Stylelint Check
+              run: yarn stylelint
