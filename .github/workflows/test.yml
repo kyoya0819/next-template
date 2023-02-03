@@ -1,0 +1,103 @@
+name: Lint
+
+on:
+    push:
+        branches: [ '*' ]
+    pull_request:
+        branches: [ '*' ]
+
+    workflow_dispatch:
+
+jobs:
+    setup:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '16'
+
+            - name: Cache Dependencies
+              id: yarn_cache
+              uses: actions/cache@v3
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+            - name: Install Dependencies
+              if: steps.yarn_cache.outputs.cache-hit != 'true'
+              run: yarn install --prefer-offline
+
+            - name: Eslint Check
+              run: yarn eslint
+
+            - name: Stylelint Check
+              run: yarn stylelint
+
+
+    eslint:
+        runs-on: ubuntu-latest
+        needs:
+            - setup
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '16'
+
+            - name: Restore Cache Dependencies
+              uses: actions/cache@v3
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+            - name: Eslint Check
+              run: yarn eslint
+
+            - name: Stylelint Check
+              run: yarn stylelint
+
+
+    stylelint:
+        runs-on: ubuntu-latest
+        needs:
+            - setup
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '16'
+
+            - name: Restore Cache Dependencies
+              uses: actions/cache@v3
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+            - name: Stylelint Check
+              run: yarn stylelint
+
+
+    build:
+        runs-on: ubuntu-latest
+        needs:
+            - setup
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '16'
+
+            - name: Restore Cache Dependencies
+              uses: actions/cache@v3
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+            - name: Build Check
+              run: yarn static
