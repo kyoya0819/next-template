@@ -17,21 +17,24 @@
         "next": "^13.2.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "sass": "^1.59.3"
+        "sass": "^1.60.0"
     },
     "devDependencies": {
-        "@types/node": "^18.15.3",
-        "@types/react": "^18.0.28",
+        "@types/node": "^18.15.11",
+        "@types/react": "^18.0.31",
         "@types/sass": "^1.45.0",
-        "@typescript-eslint/eslint-plugin": "^5.55.0",
-        "@typescript-eslint/parser": "^5.55.0",
-        "eslint": "^8.36.0",
+        "@typescript-eslint/eslint-plugin": "^5.57.0",
+        "@typescript-eslint/parser": "^5.57.0",
+        "eslint": "^8.37.0",
         "eslint-config-next": "^13.2.4",
         "eslint-plugin-import": "^2.27.5",
         "postcss-scss": "^4.0.6",
-        "stylelint": "^15.3.0",
+        "prettier": "^2.8.7",
+        "stylelint": "^15.4.0",
         "stylelint-config-recess-order": "^4.0.0",
-        "stylelint-scss": "^4.5.0",
-        "typescript": "^5.0.2"
+        "stylelint-config-standard": "^32.0.0",
+        "stylelint-prettier": "^3.0.0",
+        "stylelint-scss": "^4.6.0",
+        "typescript": "^5.0.3"
     }
 }
