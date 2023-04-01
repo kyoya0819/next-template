@@ -28,7 +28,6 @@
         "eslint": "^8.36.0",
         "eslint-config-next": "^13.2.4",
         "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-ordered-imports": "^0.6.0",
         "postcss-scss": "^4.0.6",
         "stylelint": "^15.3.0",
         "stylelint-config-recess-order": "^4.0.0",

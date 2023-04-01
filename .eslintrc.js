@@ -20,8 +20,7 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint",
-        "ordered-imports"
+        "@typescript-eslint"
     ],
     "rules": {
         "indent": [
@@ -54,8 +53,15 @@ module.exports = {
             "error",
             "never"
         ],
-        "ordered-imports/ordered-imports": [
-            "error"
+        "sort-imports": [
+            "error",
+            {
+                "allowSeparatedGroups": true,
+                "ignoreCase": true,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+            }
         ],
         "import/order": [
             "error",
